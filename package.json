@@ -1,0 +1,50 @@
+{
+  "name": "eva-protractor",
+  "version": "1.0.3",
+  "description": "Eva is easy-to-use and lightweight framework for e2e tests",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json",
+    "prepare": "npm run build",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/delprzemo/protractor-eva.git"
+  },
+  "keywords": [
+    "object",
+    "pick",
+    "typescript",
+    "filter"
+  ],
+  "author": "delprzemo",
+  "license": "ISC",
+  "files": [
+    "lib/**/*"
+  ],
+  "bugs": {
+    "url": "https://github.com/delprzemo/protractor-eva/issues"
+  },
+  "homepage": "https://github.com/delprzemo/protractor-eva#readme",
+  "devDependencies": {
+    "@types/node": "^9.4.6",
+    "prettier": "^1.16.4",
+    "tslint": "^5.14.0",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.3.3333",
+    "protractor": "~5.4.0",
+    "@types/jasmine": "~2.8.8",
+    "@types/jasminewd2": "~2.0.3",
+    "jasmine-core": "~2.99.1",
+    "jasmine-spec-reporter": "~4.2.1"
+  },
+  "dependencies": {
+    "protractor-expected-conditions-for-all-elements": "^1.0.0"
+  }
+}

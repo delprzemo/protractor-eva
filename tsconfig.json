@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": { "*": ["types/*"] },
+      "target": "es5",
+      "module": "commonjs",
+      "declaration": true,
+      "outDir": "./lib",
+      "strict": true,
+      "lib": [
+        "es2018",
+        "dom"
+      ]
+    },
+    "include": ["src"],
+    "exclude": ["node_modules", "**/__tests__/*"]
+}
