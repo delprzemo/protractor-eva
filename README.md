@@ -4,21 +4,36 @@
 ## Install
 Install with npm:
 
-```$ npm install --save object-pick-ts```
+```$ npm install protractor-eva```
 
 ## Usage
 
 ```ts
-import {ObjectPick as pick} from "object-pick-ts";
- 
-let result = pick({a: 'a', b: 'b', c: 2}, ['a', 'c']);
 
-//{a: 'a', c: 2};
+    // Test log-in functionality
+    eva.isOn("/");
+    eva.on("#top-menu).on(".login").click();
+    eva.on("#input-email").type("Test@test.pl");
+    eva.on("#input-password")
+      .type("testpsw")
+      .pressKey(protractor.Key.ENTER);
+    eva.on("#my-profile").click();
+    
+    // Test list
+    eva.onMany(by.name("my-list"))
+      .canSeeOnAny("John")
+      .canSeeOnAll(by.css(".mat-content"))
+      .canSeeOnAll("Id")
+      .canNotSeeOnAll("Janice")
+      .canNotSeeOnAny("Error")
+      .canCount(4)
+      .onSingle(2)
+         .canSee("Jennifer");
+         .click();
 ```
         
 ## About
-Related projects
-object.pick (https://www.npmjs.com/package/object.pick): JS version of this package 
+Eva is robotic test assistant which makes creating e2e tests easy for everyone. Only few methods are accessible that will cover around 90% of cases. It can be used by specialists without programming skills
 
 ## Contributing
 Pull requests and stars are always welcome. For bugs and feature requests, please create an issue.
